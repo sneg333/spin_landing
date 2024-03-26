@@ -1,0 +1,13 @@
+version: '2.0'
+services:
+  land_spin:
+    build:
+      context: .
+    ports:
+    - "8000:8000"
+
+    volumes:
+    - .:/land_spin
+
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
